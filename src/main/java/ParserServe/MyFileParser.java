@@ -23,6 +23,7 @@ public class MyFileParser implements IDataParser {
             int indexOfCsHost =0;
             int i=0;
                     //ToDo Apply to factory to get the data from desired readerType, consider reading from a queue...
+                    //ToDo add newSingleThreadExecutor() for runTime data retrieval
                     List<String> dataToParse = SourceReader.readData();
                     ListIterator<String> dataIterator = dataToParse.listIterator();
 
@@ -108,4 +109,7 @@ public class MyFileParser implements IDataParser {
         });
     }
 
+    public ConcurrentHashMap<String,Integer> getCountingMap() {
+        return countingMap;
+    }
 }

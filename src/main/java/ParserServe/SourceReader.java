@@ -8,6 +8,7 @@ import java.util.*;
 
 
 //ToDo, consider adding interface (Factory) to add multiple source readers (HTTP,different file format etc)
+//ToDo add newSingleThreadExecutor() for concurrent data retrieval
   public class SourceReader {
 
 
@@ -46,6 +47,7 @@ import java.util.*;
             if(null == in)
             {
                 path = "C:\\Users\\ariel\\Desktop\\log_example.log";
+                //path ="C:\\Users\\ariel\\Desktop\\"+"log_example_1";
             }else {
                 Properties prop = new Properties();
                 prop.load(in);
