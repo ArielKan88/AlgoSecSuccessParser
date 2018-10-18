@@ -1,3 +1,11 @@
+/*
+* The Father class of all available and future parsers, Applying the parse method through
+* Interface composition
+*
+*
+* */
+
+
 package ParserServe;
 
 import java.util.concurrent.ConcurrentHashMap;

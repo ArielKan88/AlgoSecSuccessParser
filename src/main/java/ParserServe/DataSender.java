@@ -1,3 +1,8 @@
+/*
+* Our main class, Begins the procedure of getting and parsing  the data
+* If the process were successful it sorts the dataCounting map and displays it
+* */
+
 package ParserServe;
 
 import java.util.Collections;
@@ -7,7 +12,6 @@ import java.util.concurrent.ConcurrentHashMap;
 public class DataSender{
 
     //ToDo get file path and format from .Properties, get input from interface -> Strategy of readers
-
     public static void sortAndPrintResults(ConcurrentHashMap<String,Integer> results)
     {
         results.entrySet()

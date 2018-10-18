@@ -1,3 +1,9 @@
+
+/*
+* The role of this class (and any different SourceReader in the future) is to access the
+* desired Data source (File in our case) and to retrieve the logging data from it in an efficient way
+* using Executor services for threading
+* */
 package ParserServe;
 
 import java.io.BufferedReader;
@@ -9,6 +15,7 @@ import java.util.*;
 
 //ToDo, consider adding interface (Factory) to add multiple source readers (HTTP,different file format etc)
 //ToDo add newSingleThreadExecutor() for concurrent data retrieval
+//ToDo get file path and format from .Properties file
   public class SourceReader {
 
 
@@ -47,7 +54,7 @@ import java.util.*;
             if(null == in)
             {
                 path = "C:\\Users\\ariel\\Desktop\\log_example.log";
-                //path ="C:\\Users\\ariel\\Desktop\\"+"log_example_1";
+
             }else {
                 Properties prop = new Properties();
                 prop.load(in);

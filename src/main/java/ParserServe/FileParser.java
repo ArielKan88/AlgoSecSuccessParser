@@ -1,3 +1,7 @@
+/*
+* The son class of LogParser, Initializes the IDataParser to actual Parser class
+* in this case a file Parser*/
+
 package ParserServe;
 
 

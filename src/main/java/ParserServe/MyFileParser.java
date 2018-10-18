@@ -1,3 +1,8 @@
+/*
+* The actual parser of the data, retreives the data from the Reader and Parses it according to the rules
+* Should include Executor Service of a single thread to allow runTime data reading (During Log receiving)
+* */
+
 package ParserServe;
 
 import java.time.LocalDateTime;

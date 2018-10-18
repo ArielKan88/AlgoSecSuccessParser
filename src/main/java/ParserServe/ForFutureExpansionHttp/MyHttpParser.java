@@ -1,4 +1,6 @@
-package ParserServe;
+package ParserServe.ForFutureExpansionHttp;
+
+import ParserServe.IDataParser;
 
 import java.time.LocalDateTime;
 import java.util.concurrent.ConcurrentHashMap;

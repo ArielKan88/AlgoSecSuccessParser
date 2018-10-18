@@ -1,4 +1,6 @@
-package ParserServe;
+package ParserServe.ForFutureExpansionHttp;
+
+import ParserServe.LogParser;
 
 public class HttpParser extends LogParser {
 
