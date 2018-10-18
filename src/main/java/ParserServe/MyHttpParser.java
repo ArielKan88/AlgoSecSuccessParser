@@ -3,13 +3,13 @@ package ParserServe;
 import java.time.LocalDateTime;
 import java.util.concurrent.ConcurrentHashMap;
 
-public class MyHttpReader implements DataSource {
+public class MyHttpParser implements IDataParser {
 
     LocalDateTime counterLastUpdate;
 
     private ConcurrentHashMap<String,Integer> countingMap;
 
-    public MyHttpReader()
+    public MyHttpParser()
     {
         countingMap = new ConcurrentHashMap<>();
     }

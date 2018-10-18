@@ -2,7 +2,7 @@ package ParserServe;
 
 import java.util.concurrent.ConcurrentHashMap;
 
-public interface DataSource {
+public interface IDataParser {
 
     ConcurrentHashMap ParseData();
 }

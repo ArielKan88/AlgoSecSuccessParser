@@ -1,19 +1,18 @@
 package ParserServe;
 
-import java.io.*;
 import java.time.LocalDateTime;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class MyFileReader implements DataSource{
+public class MyFileParser implements IDataParser {
 
     LocalDateTime counterLastUpdate;
 
     private ConcurrentHashMap<String,Integer> countingMap;
 
-        public MyFileReader()
+        public MyFileParser()
         {
             countingMap = new ConcurrentHashMap<>();
         }
@@ -23,12 +22,13 @@ public class MyFileReader implements DataSource{
 
             int indexOfCsHost =0;
             int i=0;
-
-                    ArrayList<String> dataToParse = SourceReader.readData();
+                    //ToDo Apply to factory to get the data from desired readerType, consider reading from a queue...
+                    List<String> dataToParse = SourceReader.readData();
                     ListIterator<String> dataIterator = dataToParse.listIterator();
 
                     while(dataIterator.hasNext())
                     {
+
                         String data = dataIterator.next();
                         if(i<5 && data.startsWith("#Fields"))
                         {
@@ -36,13 +36,14 @@ public class MyFileReader implements DataSource{
 
                         }
                         //First 5 lines of the file are comments and MetaData
-                        if(i>5)
+                        if(i>5 && indexOfCsHost != -1)
                         {
                             String[] line = data.split(" ");
 
                             String host = line[indexOfCsHost];
                             validateAndCountHosts(host);
                         }
+
                         ++i;
                     }
                     //ToDo Implement by demand requests according to request time
@@ -54,7 +55,7 @@ public class MyFileReader implements DataSource{
 
     private int findIndexOfHosts(String data) {
 
-            int index=0;
+            int index=-1;
 
                 String[] titlesLine = data.split(" ");
 
@@ -105,11 +106,6 @@ public class MyFileReader implements DataSource{
         countingMap.entrySet().forEach(entry -> {
             System.out.println("Host : " + entry.getKey() + " Count : " + entry.getValue());
         });
-    }
-
-    public ConcurrentHashMap<String,Integer> getParsingResults()
-    {
-        return countingMap;
     }
 
 }

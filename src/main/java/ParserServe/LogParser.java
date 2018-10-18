@@ -2,10 +2,10 @@ package ParserServe;
 
 import java.util.concurrent.ConcurrentHashMap;
 
-public class LogDataParser {
+public class LogParser {
 
 
-    protected DataSource source;
+    protected IDataParser source;
 
         public ConcurrentHashMap tryToParseSource()
         {

@@ -7,14 +7,14 @@ import java.io.InputStream;
 import java.util.*;
 
 
-//ToDo, consider adding interface to add abstraction for multiple readers
+//ToDo, consider adding interface (Factory) to add multiple source readers (HTTP,different file format etc)
   public class SourceReader {
 
 
       //ToDo re-check necessity -> Synchronized queue
-      public static ArrayList<String> data = new ArrayList<>();
+      public static List<String> data = new ArrayList<>();
 
-      public static ArrayList<String> readData(){
+      public static List<String> readData(){
 
           String filePath = getPathFromProperties();
           String row;
@@ -26,10 +26,13 @@ import java.util.*;
               {
                   data.add(row);
               }
+
           }catch (IOException e)
           {
+              //todo add proper logging
               e.printStackTrace();
           }
+
 
           return data;
       }
@@ -38,7 +41,7 @@ import java.util.*;
     protected static String getPathFromProperties() {
         String path = null;
         try{
-            InputStream in = MyFileReader.class.getClassLoader().getResourceAsStream("/src/Config/Parsing.properties");
+            InputStream in = MyFileParser.class.getClassLoader().getResourceAsStream("/src/Config/Parsing.properties");
 
             if(null == in)
             {
@@ -52,6 +55,7 @@ import java.util.*;
         }
         catch(IOException e)
         {
+            //todo add proper logging
             e.printStackTrace();
         }
 
