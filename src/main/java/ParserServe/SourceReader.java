@@ -6,23 +6,20 @@
 * */
 package ParserServe;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.util.*;
 
 
 //ToDo, consider adding interface (Factory) to add multiple source readers (HTTP,different file format etc)
-//ToDo add newSingleThreadExecutor() for concurrent data retrieval
-//ToDo get file path and format from .Properties file
   public class SourceReader {
 
 
       //ToDo re-check necessity -> Synchronized queue
+      //ToDo add Static getter
       public static List<String> data = new ArrayList<>();
 
-      public static List<String> readData(){
+      //ToDo change to void, should be invoked from Main in DataSender class
+      public static void readData(){
 
           String filePath = getPathFromProperties();
           String row;
@@ -37,37 +34,36 @@ import java.util.*;
 
           }catch (IOException e)
           {
-              //todo add proper logging
+              //todo add proper logging, exception handling
               e.printStackTrace();
           }
 
+      }
 
+      public static List<String> getData(){
           return data;
       }
 
-    //ToDo make the properties retrieving work
     protected static String getPathFromProperties() {
+        Properties pathProperties = new Properties();
         String path = null;
-        try{
-            InputStream in = MyFileParser.class.getClassLoader().getResourceAsStream("/src/Config/Parsing.properties");
 
-            if(null == in)
+	    try(InputStream input = new FileInputStream("parsing.properties")) {
+
+		    pathProperties.load(input);
+
+		    path = pathProperties.getProperty("LogFilePath");
+
+            if(null == path)
             {
                 path = "C:\\Users\\ariel\\Desktop\\log_example.log";
 
-            }else {
-                Properties prop = new Properties();
-                prop.load(in);
-
-                path = prop.getProperty("LogFilePath");
             }
-        }
-        catch(IOException e)
-        {
-            //todo add proper logging
-            e.printStackTrace();
-        }
 
+	    } catch (IOException e) {
+            //todo add proper logging, exception handling
+            e.printStackTrace();
+	    }
         return path;
     }
 

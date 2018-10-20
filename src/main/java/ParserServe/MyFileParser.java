@@ -1,6 +1,6 @@
 /*
 * The actual parser of the data, retreives the data from the Reader and Parses it according to the rules
-* Should include Executor Service of a single thread to allow runTime data reading (During Log receiving)
+* Should include Executor Service of a single thread to allow runTime data parsing.
 * */
 
 package ParserServe;
@@ -8,6 +8,9 @@ package ParserServe;
 import java.time.LocalDateTime;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -27,9 +30,8 @@ public class MyFileParser implements IDataParser {
 
             int indexOfCsHost =0;
             int i=0;
-                    //ToDo Apply to factory to get the data from desired readerType, consider reading from a queue...
-                    //ToDo add newSingleThreadExecutor() for runTime data retrieval
-                    List<String> dataToParse = SourceReader.readData();
+                    //ToDo add newSingleThreadExecutor() for runTime data parsing
+                    List<String> dataToParse = SourceReader.getData();
                     ListIterator<String> dataIterator = dataToParse.listIterator();
 
                     while(dataIterator.hasNext())
@@ -58,6 +60,33 @@ public class MyFileParser implements IDataParser {
 
             return countingMap;
         }
+    public void sortResults(){
+
+       ExecutorService readingService =  Executors.newSingleThreadExecutor();
+
+       readingService.execute(() -> {
+
+               if(countingMap.isEmpty())
+               {
+                   try {
+                       TimeUnit.MILLISECONDS.sleep(10);
+                   }catch (InterruptedException e)
+                   {
+                       //ToDo add proper logging
+                       e.printStackTrace();
+                   }
+               }
+               else {
+                   countingMap.entrySet()
+                           .stream()
+                           .sorted(Collections.reverseOrder(Map.Entry.comparingByValue())).forEach(entry -> {
+                       System.out.println("Host : " + entry.getKey() + " Count : " + entry.getValue());
+                   });
+               }
+
+       });
+       readingService.shutdown();
+    }
 
     private int findIndexOfHosts(String data) {
 

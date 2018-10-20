@@ -19,6 +19,8 @@ public class LogParser {
         {
            ConcurrentHashMap result= source.ParseData();
 
+           source.sortResults();
+
            return result;
         }
 }
