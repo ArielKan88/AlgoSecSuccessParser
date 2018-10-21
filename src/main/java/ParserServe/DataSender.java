@@ -1,7 +1,6 @@
 /*
 * Our main class, Begins the procedure of getting and parsing  the data
-* If the process were successful it sorts the dataCounting map and displays it
-* */
+* * */
 
 package ParserServe;
 
@@ -31,7 +30,9 @@ public class DataSender{
     private static void setFilePathToPropertiesFile() {
         Properties parsingProperties = new Properties();
 
+        System.out.println("Welcome to Our Log Parser! ");
         System.out.println("Please Enter The Path of the file you wish to parse:");
+        System.out.println("Something like this C:\\Users\\ariel\\Desktop\\log_example.log");
         Scanner userInput = new Scanner(System.in);
 
             try(OutputStream output = new FileOutputStream("parsing.properties")) {

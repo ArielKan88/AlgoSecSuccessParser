@@ -1,4 +1,3 @@
-
 /*
 * The role of this class (and any different SourceReader in the future) is to access the
 * desired Data source (File in our case) and to retrieve the logging data from it in an efficient way
@@ -9,10 +8,8 @@ package ParserServe;
 import java.io.*;
 import java.util.*;
 
-
 //ToDo, consider adding interface (Factory) to add multiple source readers (HTTP,different file format etc)
   public class SourceReader {
-
 
       //ToDo re-check necessity -> Synchronized queue
       public static List<String> data = new ArrayList<>();
@@ -22,8 +19,7 @@ import java.util.*;
           String filePath = getPathFromProperties();
           String row;
 
-          try {
-              BufferedReader bufferedReader = new BufferedReader(new FileReader(filePath));
+          try(BufferedReader bufferedReader = new BufferedReader(new FileReader(filePath))) {
 
               while((row = bufferedReader.readLine()) != null)
               {
@@ -35,7 +31,6 @@ import java.util.*;
               //todo add proper logging, exception handling
               e.printStackTrace();
           }
-
       }
 
       public static List<String> getData(){
@@ -46,7 +41,7 @@ import java.util.*;
         Properties pathProperties = new Properties();
         String path = null;
 
-	    try(InputStream input = new FileInputStream("parsing.properties")) {
+            try(InputStream input = new FileInputStream("parsing.properties")) {
 
 		    pathProperties.load(input);
 
