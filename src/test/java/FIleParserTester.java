@@ -1,6 +1,7 @@
 import ParserServe.MyFileParser;
 import java.util.concurrent.ConcurrentHashMap;
 
+import ParserServe.SourceReader;
 import org.junit.*;
 
 public class FIleParserTester {
@@ -25,9 +26,10 @@ public class FIleParserTester {
     @Test
     public void testFileParser()
     {
+        SourceReader.readData();
         MyFileParser parser = new MyFileParser();
-
-        ConcurrentHashMap<String,Integer> actualMap = parser.ParseData();
+        parser.ParseData();
+        ConcurrentHashMap<String,Integer> actualMap = parser.getCountingMap();
 
         Assert.assertEquals(excpectedResult.get("www.google-analytics.com"),actualMap.get("www.google-analytics.com"));
         Assert.assertEquals(excpectedResult.get("clients1.google.com"),actualMap.get("clients1.google.com"));
@@ -41,7 +43,7 @@ public class FIleParserTester {
     {
         MyFileParser parser = new MyFileParser();
 
-        ConcurrentHashMap<String,Integer> actualMap = parser.ParseData();
+        ConcurrentHashMap<String,Integer> actualMap = parser.getCountingMap();
 
 
         Assert.assertEquals(0,actualMap.size());

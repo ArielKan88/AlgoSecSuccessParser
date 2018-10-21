@@ -5,7 +5,6 @@
 
 package ParserServe;
 
-import java.time.LocalDateTime;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutorService;
@@ -14,9 +13,8 @@ import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+//ToDo Fix by demand
 public class MyFileParser implements IDataParser {
-
-    LocalDateTime counterLastUpdate;
 
     private ConcurrentHashMap<String,Integer> countingMap;
 
@@ -25,13 +23,15 @@ public class MyFileParser implements IDataParser {
             countingMap = new ConcurrentHashMap<>();
         }
 
-        public ConcurrentHashMap ParseData()
+        public void ParseData()
         {
 
             int indexOfCsHost =0;
             int i=0;
                     //ToDo add newSingleThreadExecutor() for runTime data parsing
                     List<String> dataToParse = SourceReader.getData();
+
+
                     ListIterator<String> dataIterator = dataToParse.listIterator();
 
                     while(dataIterator.hasNext())
@@ -54,12 +54,9 @@ public class MyFileParser implements IDataParser {
 
                         ++i;
                     }
-                    //ToDo Implement by demand requests according to request time
-                    counterLastUpdate = LocalDateTime.now();
-     //               printHashMap();
 
-            return countingMap;
         }
+
     public void sortResults(){
 
        ExecutorService readingService =  Executors.newSingleThreadExecutor();
@@ -134,13 +131,6 @@ public class MyFileParser implements IDataParser {
 
                     }
 
-    }
-
-    public void printHashMap()
-    {
-        countingMap.entrySet().forEach(entry -> {
-            System.out.println("Host : " + entry.getKey() + " Count : " + entry.getValue());
-        });
     }
 
     public ConcurrentHashMap<String,Integer> getCountingMap() {

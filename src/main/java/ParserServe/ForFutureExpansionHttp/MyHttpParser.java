@@ -15,8 +15,12 @@ public class MyHttpParser implements IDataParser {
     {
         countingMap = new ConcurrentHashMap<>();
     }
-    //ToDo Implement method for HTTP input source, get source URL from properties file
-    public ConcurrentHashMap ParseData() {
-        return countingMap;
+
+    public void ParseData() {
+        //ToDo Implement method for HTTP input source
+    }
+
+    public void sortResults() {
+      //ToDo add to future expansion
     }
 }

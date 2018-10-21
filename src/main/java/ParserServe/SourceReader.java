@@ -15,10 +15,8 @@ import java.util.*;
 
 
       //ToDo re-check necessity -> Synchronized queue
-      //ToDo add Static getter
       public static List<String> data = new ArrayList<>();
 
-      //ToDo change to void, should be invoked from Main in DataSender class
       public static void readData(){
 
           String filePath = getPathFromProperties();

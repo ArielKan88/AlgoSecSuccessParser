@@ -13,18 +13,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MyFileParser.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MyFileParser.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ParserServe/MyFileParser.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
-              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+              <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
               <folding>
                 <element signature="e#0#3602#0" expanded="true" />
                 <element signature="imports" expanded="true" />
                 <element signature="e#380#381#0" expanded="true" />
                 <element signature="e#443#444#0" expanded="true" />
-                <element signature="e#4124#4125#0" expanded="true" />
-                <element signature="e#4158#4159#0" expanded="true" />
+                <element signature="e#4362#4363#0" expanded="true" />
+                <element signature="e#4396#4397#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -33,25 +33,13 @@
       <file leaf-file-name="SourceReader.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ParserServe/SourceReader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="524">
-              <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
+            <state relative-caret-position="325">
+              <caret line="60" column="33" lean-forward="true" selection-start-line="60" selection-start-column="33" selection-end-line="60" selection-end-column="33" />
               <folding>
                 <element signature="e#0#1741#0" expanded="true" />
                 <element signature="imports" expanded="true" />
                 <element signature="e#1226#1227#0" expanded="true" />
                 <element signature="e#1256#1257#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IDataParser.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ParserServe/IDataParser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="19" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="19" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -69,10 +57,22 @@
       <file leaf-file-name="DataSender.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ParserServe/DataSender.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="28" column="19" lean-forward="true" selection-start-line="24" selection-start-column="8" selection-end-line="28" selection-end-column="19" />
+            <state relative-caret-position="136">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
               <folding>
                 <element signature="e#0#1086#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FIleParserTester.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/FIleParserTester.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="40" column="9" lean-forward="true" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
+              <folding>
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
@@ -82,8 +82,8 @@
       <file leaf-file-name="FileParser.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ParserServe/FileParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="119">
+              <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
               <folding>
                 <element signature="e#0#248#0" expanded="true" />
               </folding>
@@ -94,11 +94,32 @@
       <file leaf-file-name="LogParser.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ParserServe/LogParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+            <state relative-caret-position="323">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
               <folding>
                 <element signature="e#0#300#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyHttpParser.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ParserServe/ForFutureExpansionHttp/MyHttpParser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="19" column="53" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IDataParser.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ParserServe/IDataParser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="120" selection-start-line="2" selection-start-column="120" selection-end-line="2" selection-end-column="120" />
             </state>
           </provider>
         </entry>
@@ -152,16 +173,17 @@
         <option value="$PROJECT_DIR$/src/main/java/ParserServe/HttpParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/ParserServe/LogDataParser.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/SourceReaderTester.java" />
-        <option value="$PROJECT_DIR$/src/test/java/FIleParserTester.java" />
         <option value="$PROJECT_DIR$/src/test/java/IntegrationTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/ParserServe/ForFutureExpansionHttp/HttpParser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ParserServe/SourceReader.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ParserServe/DataSender.java" />
         <option value="$PROJECT_DIR$/src/main/java/ParserServe/FileParser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ParserServe/IDataParser.java" />
+        <option value="$PROJECT_DIR$/src/test/java/SourceReaderTester.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ParserServe/SourceReader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ParserServe/ForFutureExpansionHttp/MyHttpParser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ParserServe/DataSender.java" />
+        <option value="$PROJECT_DIR$/src/test/java/FIleParserTester.java" />
         <option value="$PROJECT_DIR$/src/main/java/ParserServe/MyFileParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/ParserServe/LogParser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ParserServe/IDataParser.java" />
       </list>
     </option>
   </component>
@@ -274,6 +296,23 @@
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
+    <configuration name="FIleParserTester" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AlgoSecSuccessParser" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="FIleParserTester" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
     <configuration name="FIleParserTester.testFileParser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AlgoSecSuccessParser" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -368,12 +407,14 @@
       <item itemvalue="JUnit.SourceReaderTester" />
       <item itemvalue="JUnit.FIleParserTester.testFileParser" />
       <item itemvalue="JUnit.FIleParserTester.testFileParserWithNonExistingFile" />
+      <item itemvalue="JUnit.FIleParserTester" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FIleParserTester" />
+        <item itemvalue="JUnit.SourceReaderTester" />
         <item itemvalue="JUnit.FIleParserTester.testFileParserWithNonExistingFile" />
         <item itemvalue="JUnit.FIleParserTester.testFileParser" />
-        <item itemvalue="JUnit.SourceReaderTester" />
       </list>
     </recent_temporary>
   </component>
@@ -388,29 +429,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SourceReaderTester - 2018.10.18 at 14h 01m 18s.xml">
-      <configuration name="SourceReaderTester" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SourceReaderTester - 2018.10.18 at 14h 02m 13s.xml">
-      <configuration name="SourceReaderTester" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SourceReaderTester - 2018.10.18 at 14h 12m 37s.xml">
-      <configuration name="SourceReaderTester" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FIleParserTester_testFileParser - 2018.10.18 at 14h 33m 46s.xml">
-      <configuration name="FIleParserTester.testFileParser" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FIleParserTester_testFileParser - 2018.10.18 at 14h 34m 30s.xml">
-      <configuration name="FIleParserTester.testFileParser" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FIleParserTester_testFileParser - 2018.10.18 at 14h 50m 07s.xml">
-      <configuration name="FIleParserTester.testFileParser" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FIleParserTester_testFileParser - 2018.10.18 at 14h 51m 52s.xml">
-      <configuration name="FIleParserTester.testFileParser" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="FIleParserTester_testFileParserWithNonExistingFile - 2018.10.18 at 14h 52m 01s.xml">
       <configuration name="FIleParserTester.testFileParserWithNonExistingFile" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SourceReaderTester - 2018.10.21 at 00h 35m 23s.xml">
+      <configuration name="SourceReaderTester" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SourceReaderTester - 2018.10.21 at 00h 36m 46s.xml">
+      <configuration name="SourceReaderTester" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SourceReaderTester - 2018.10.21 at 00h 37m 24s.xml">
+      <configuration name="SourceReaderTester" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SourceReaderTester - 2018.10.21 at 00h 39m 53s.xml">
+      <configuration name="SourceReaderTester" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SourceReaderTester - 2018.10.21 at 00h 40m 57s.xml">
+      <configuration name="SourceReaderTester" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FIleParserTester - 2018.10.21 at 00h 49m 47s.xml">
+      <configuration name="FIleParserTester" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FIleParserTester - 2018.10.21 at 00h 52m 30s.xml">
+      <configuration name="FIleParserTester" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FIleParserTester - 2018.10.21 at 01h 31m 18s.xml">
+      <configuration name="FIleParserTester" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FIleParserTester - 2018.10.21 at 01h 32m 05s.xml">
+      <configuration name="FIleParserTester" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -458,12 +505,18 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ParserServe/SourceReader.java</url>
-          <line>54</line>
+          <line>22</line>
           <properties />
-          <option name="timeStamp" value="8" />
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/SourceReaderTester.java</url>
+          <line>29</line>
+          <properties />
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="9" />
+      <option name="time" value="12" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -491,8 +544,8 @@
             <element signature="imports" expanded="true" />
             <element signature="e#380#381#0" expanded="true" />
             <element signature="e#443#444#0" expanded="true" />
-            <element signature="e#4124#4125#0" expanded="true" />
-            <element signature="e#4158#4159#0" expanded="true" />
+            <element signature="e#4362#4363#0" expanded="true" />
+            <element signature="e#4396#4397#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -514,9 +567,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -618,23 +668,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/SourceReaderTester.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/FIleParserTester.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/IntegrationTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -652,18 +685,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ParserServe/ForFutureExpansionHttp/MyHttpParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#523#524#0" expanded="true" />
-            <element signature="e#557#558#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -678,10 +699,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/util/concurrent/Executors.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="676" column="31" selection-start-line="676" selection-start-column="25" selection-end-line="676" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/SourceReaderTester.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="39" column="24" lean-forward="true" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ParserServe/ForFutureExpansionHttp/MyHttpParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="19" column="53" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ParserServe/DataSender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="e#0#1086#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/FIleParserTester.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="40" column="9" lean-forward="true" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ParserServe/SourceReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
-          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
+        <state relative-caret-position="325">
+          <caret line="60" column="33" lean-forward="true" selection-start-line="60" selection-start-column="33" selection-end-line="60" selection-end-column="33" />
           <folding>
             <element signature="e#0#1741#0" expanded="true" />
             <element signature="imports" expanded="true" />
@@ -691,50 +760,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/util/concurrent/Executors.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ParserServe/LogParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="676" column="31" selection-start-line="676" selection-start-column="25" selection-end-line="676" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ParserServe/DataSender.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="28" column="19" lean-forward="true" selection-start-line="24" selection-start-column="8" selection-end-line="28" selection-end-column="19" />
+        <state relative-caret-position="323">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
           <folding>
-            <element signature="e#0#1086#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ParserServe/IDataParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="19" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="19" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#0#300#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ParserServe/FileParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="119">
+          <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
           <folding>
             <element signature="e#0#248#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ParserServe/LogParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#300#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -742,15 +783,22 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/ParserServe/MyFileParser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+          <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
           <folding>
             <element signature="e#0#3602#0" expanded="true" />
             <element signature="imports" expanded="true" />
             <element signature="e#380#381#0" expanded="true" />
             <element signature="e#443#444#0" expanded="true" />
-            <element signature="e#4124#4125#0" expanded="true" />
-            <element signature="e#4158#4159#0" expanded="true" />
+            <element signature="e#4362#4363#0" expanded="true" />
+            <element signature="e#4396#4397#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ParserServe/IDataParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="120" selection-start-line="2" selection-start-column="120" selection-end-line="2" selection-end-column="120" />
         </state>
       </provider>
     </entry>

@@ -1,17 +1,15 @@
 /**
  * The role of the IDataParser interface is to help
- * navigate between the different available parsers (and allows future expansion
+ * decouple between the different available parsers and their implementation(and allows future expansion of new parsers)
  */
 
 
 
 package ParserServe;
 
-import java.util.concurrent.ConcurrentHashMap;
-
 public interface IDataParser {
 
-    ConcurrentHashMap ParseData();
+    void ParseData();
 
    void sortResults();
 }

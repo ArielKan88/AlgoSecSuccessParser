@@ -17,7 +17,7 @@ public class SourceReaderTester {
 
         String firstRow = "#Software: SGOS 5.4.3.7";
 
-         //   expectedResult.add(firstRow);
+           expectedResult.add(firstRow);
 
     }
 
@@ -26,7 +26,8 @@ public class SourceReaderTester {
     {
         //ToDo technically we're suppose to use Mocking here because it is a Static Method,
         // just for the test we do it this way
-        List<String> actual = SourceReader.readData();
+        SourceReader.readData();
+        List<String> actual = SourceReader.getData();
 
         Assert.assertEquals(expectedResult.get(0),actual.get(0));
     }
@@ -36,7 +37,8 @@ public class SourceReaderTester {
     @Test
     public void testReaderWithDiffPath()
     {
-        List<String> actual = SourceReader.readData();
+        SourceReader.readData();
+        List<String> actual = SourceReader.getData();
 
         Assert.assertEquals(expectedResult.size(),actual.size());
 

@@ -5,22 +5,18 @@
 *
 * */
 
-
 package ParserServe;
-
-import java.util.concurrent.ConcurrentHashMap;
 
 public class LogParser {
 
-
     protected IDataParser source;
 
-        public ConcurrentHashMap tryToParseSource()
+        public void tryToParseSource()
         {
-           ConcurrentHashMap result= source.ParseData();
+           source.ParseData();
 
            source.sortResults();
 
-           return result;
+
         }
 }
