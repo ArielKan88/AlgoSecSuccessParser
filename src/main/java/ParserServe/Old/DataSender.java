@@ -2,10 +2,11 @@
 * Our main class, Begins the procedure of getting and parsing  the data
 * * */
 
-package ParserServe;
+package ParserServe.Old;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.Properties;
 import java.util.Scanner;
@@ -18,6 +19,8 @@ public class DataSender{
 
     public static void main(String[] args)
     {
+        InputStream log = DataSender.class.getResourceAsStream("/log_example.log");
+
         SourceReader.readData();
         setFilePathToPropertiesFile();
 

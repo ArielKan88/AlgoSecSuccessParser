@@ -5,7 +5,7 @@
 
 
 
-package ParserServe;
+package ParserServe.Old;
 
 public interface IDataParser {
 

@@ -3,7 +3,7 @@
 * desired Data source (File in our case) and to retrieve the logging data from it in an efficient way
 * using Executor services for threading
 * */
-package ParserServe;
+package ParserServe.Old;
 
 import java.io.*;
 import java.util.*;
@@ -17,6 +17,7 @@ import java.util.*;
       public static void readData(){
 
           String filePath = getPathFromProperties();
+
           String row;
 
           try(BufferedReader bufferedReader = new BufferedReader(new FileReader(filePath))) {

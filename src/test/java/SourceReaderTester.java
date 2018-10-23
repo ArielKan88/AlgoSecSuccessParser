@@ -1,11 +1,9 @@
-import ParserServe.SourceReader;
+import ParserServe.Old.SourceReader;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.util.*;
-
-import static org.junit.Assert.*;
 
 public class SourceReaderTester {
 

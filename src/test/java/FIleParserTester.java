@@ -1,7 +1,7 @@
-import ParserServe.MyFileParser;
+import ParserServe.Old.MyFileParser;
 import java.util.concurrent.ConcurrentHashMap;
 
-import ParserServe.SourceReader;
+import ParserServe.Old.SourceReader;
 import org.junit.*;
 
 public class FIleParserTester {
@@ -41,6 +41,7 @@ public class FIleParserTester {
     @Test
     public void testFileParserWithNonExistingFile()
     {
+        SourceReader.readData();
         MyFileParser parser = new MyFileParser();
 
         ConcurrentHashMap<String,Integer> actualMap = parser.getCountingMap();
