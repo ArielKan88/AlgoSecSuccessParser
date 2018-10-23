@@ -51,7 +51,7 @@ public class ByDemandFileReader implements Runnable,SourceReader{
 
             //After the initial reading we want to watch for any modification in the file
             WatchService watcher = FileSystems.getDefault().newWatchService();
-            Path fileDir = Paths.get(pathForService);//ToDo possible exception
+            Path fileDir = Paths.get(pathForService);
             fileDir.register(watcher,StandardWatchEventKinds.ENTRY_MODIFY);
 
             while (true)
@@ -68,7 +68,7 @@ public class ByDemandFileReader implements Runnable,SourceReader{
 
                     if(kind == ENTRY_MODIFY){
                         try {
-
+                            //ToDo check for equality to original path and if equel don't calculate the new path
                             Path modifiedPath = Paths.get(fileDir.toString(), fileName.toString());
                             Path real_path = modifiedPath.toRealPath(LinkOption.NOFOLLOW_LINKS);
                             System.out.println(real_path);
