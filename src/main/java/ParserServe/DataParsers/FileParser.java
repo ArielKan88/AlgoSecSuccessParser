@@ -39,15 +39,20 @@ public class FileParser implements Runnable,IDataParser {
         }
     }
 
+    private int findIndexOfHosts(List<String> metdaData) {
+        return metdaData.indexOf(CS_HOST);
+    }
+
     private void extractHosts(String line, int indexOfCS) {
 
         //Looking for hosts with spaces inside ToDo for later ((?<![\\])['"])((?:.(?!(?<![\\])\1))*.?)\1
-        Pattern pattern = Pattern.compile(".*\\\"(.*)\\\".*");
+        Pattern pattern = Pattern.compile("((?<![\\\\])['\"])((?:.(?!(?<![\\\\])\\1))*.?)\\1");
+
         Matcher matcher = pattern.matcher(line);
 
         if(matcher.find()) {
-            System.out.println(matcher.group(1));
-            validateAndSend(matcher.group(1));
+
+            validateAndSend(matcher.group());
         }
         //No hosts with inspaces were found, split by spaces and Index
         else{
@@ -82,7 +87,4 @@ public class FileParser implements Runnable,IDataParser {
 
     }
 
-    private int findIndexOfHosts(List<String> metdaData) {
-        return metdaData.indexOf(CS_HOST);
-    }
 }

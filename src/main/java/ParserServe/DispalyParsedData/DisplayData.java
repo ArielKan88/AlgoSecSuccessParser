@@ -40,7 +40,7 @@ public class DisplayData implements Runnable {
     }
 
     private void sortAndPrintMap()
-    {
+    {//ToDo add while(true) in the right place
         ExecutorService readingService =  Executors.newSingleThreadExecutor();
 
 
