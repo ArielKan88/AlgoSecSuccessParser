@@ -214,33 +214,6 @@
               <item name="AlgoSecSuccessParser" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ParserServe" type="462c0819:PsiDirectoryNode" />
-              <item name="DataParsers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AlgoSecSuccessParser" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AlgoSecSuccessParser" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ParserServe" type="462c0819:PsiDirectoryNode" />
-              <item name="DispalyParsedData" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AlgoSecSuccessParser" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AlgoSecSuccessParser" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ParserServe" type="462c0819:PsiDirectoryNode" />
-              <item name="Old" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AlgoSecSuccessParser" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AlgoSecSuccessParser" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -512,10 +485,10 @@
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32761577" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32761577" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32761577" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26172465" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26172465" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24962178" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32838285" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
