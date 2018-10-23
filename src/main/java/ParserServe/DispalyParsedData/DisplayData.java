@@ -24,6 +24,9 @@ public class DisplayData implements Runnable {
         while (true)
         {
             try {
+                 if(parsedDataBuffer.isEmpty()){
+                     TimeUnit.MILLISECONDS.sleep(100);
+                 }
                 String parsedHost = parsedDataBuffer.take();
 
                 Integer temp = countingMap.putIfAbsent(parsedHost,1);

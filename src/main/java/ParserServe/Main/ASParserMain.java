@@ -21,9 +21,10 @@ public class ASParserMain {
 
         }
         else {
-            runDispaly(parsedDataQ);
-            runParser(dataQ,parsedDataQ);
+
             runByDemandFileReader(args,dataQ);
+            runParser(dataQ,parsedDataQ);
+            runDispaly(parsedDataQ);
         }
     }
 

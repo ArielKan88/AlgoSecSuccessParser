@@ -3,6 +3,7 @@ package ParserServe.DataParsers;
 import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -22,13 +23,23 @@ public class FileParser implements Runnable,IDataParser {
 
     public void parseData() {
 
-        int indexOfCS = 0;
+        int indexOfCS = -1;
         while (true)
         {
+            if(originalDataBuffer.isEmpty())
+            {
+                try {
+                    TimeUnit.MILLISECONDS.sleep(150);
+                }catch (InterruptedException e)
+                {
+                    //ToDo add proper logging
+                    e.printStackTrace();
+                }
+            }
             String line = originalDataBuffer.poll();
 
             //File's meta-data find the index of cs-host
-            if(line.startsWith(FIELDS_STR)){
+            if(line != null && line.startsWith(FIELDS_STR)){
                 String[] metaData = line.split(" ");
                 indexOfCS = findIndexOfHosts(Arrays.asList(metaData));
             }
