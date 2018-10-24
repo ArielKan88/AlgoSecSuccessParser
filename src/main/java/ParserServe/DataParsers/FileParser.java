@@ -1,9 +1,10 @@
 package ParserServe.DataParsers;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.concurrent.BlockingQueue;
 
 public class FileParser implements Runnable, IDataParser {
-
     private final String FIELDS_STR = "#Fields:";
     private final String CS_HOST = "cs-host";
     private BlockingQueue<String> originalDataBuffer;
@@ -26,7 +27,7 @@ public class FileParser implements Runnable, IDataParser {
                 //File's meta-data find the index of cs-host
                 if (line.startsWith(FIELDS_STR)) {
                     String[] metaData = line.split("\\s+");
-                    this.indexOfCS = findIndexOfHosts(metaData);
+                    this.indexOfCS = findIndexOfHosts(Arrays.asList(metaData));
                     if (indexOfCS < 0) throw new RuntimeException("No " + CS_HOST + " field. Cannot parse");
                 } else if (!line.startsWith("#")) {
                     String host = extractHost(line);
@@ -63,19 +64,8 @@ public class FileParser implements Runnable, IDataParser {
         return sb.toString();
     }
 
-    private int findIndexOfHosts(String[] metaData) {
-        int csIndex = -1;
-
-        for(int i=0;i<metaData.length;++i)
-        {
-            if(metaData[i].equals(CS_HOST))
-            {
-                csIndex = i;
-            }
-
-        }
-        return csIndex;
-
+    private int findIndexOfHosts(List<String> metaData) {
+        return metaData.indexOf(CS_HOST) - 1;
     }
 
 }
