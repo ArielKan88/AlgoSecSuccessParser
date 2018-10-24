@@ -1,100 +1,80 @@
 package ParserServe.DataParsers;
 
-import java.util.Arrays;
-import java.util.List;
 import java.util.concurrent.BlockingQueue;
-import java.util.concurrent.TimeUnit;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
-public class FileParser implements Runnable,IDataParser {
-    private BlockingQueue<String> originalDataBuffer;
-    private BlockingQueue<String> parsedDataBuffer;
+public class FileParser implements Runnable, IDataParser {
+
     private final String FIELDS_STR = "#Fields:";
     private final String CS_HOST = "cs-host";
-    public FileParser(BlockingQueue<String> dataQ, BlockingQueue<String> parsedQ)
-    {
+    private BlockingQueue<String> originalDataBuffer;
+    private BlockingQueue<String> parsedDataBuffer;
+    private int indexOfCS;
+
+    public FileParser(BlockingQueue<String> dataQ, BlockingQueue<String> parsedQ) {
         originalDataBuffer = dataQ;
         parsedDataBuffer = parsedQ;
     }
+
     public void run() {
         parseData();
     }
 
     public void parseData() {
-
-        int indexOfCS = -1;
-        while (true)
-        {
-            if(originalDataBuffer.isEmpty())
-            {
-                try {
-                    TimeUnit.MILLISECONDS.sleep(150);
-                }catch (InterruptedException e)
-                {
-                    //ToDo add proper logging
-                    e.printStackTrace();
+        while (true) {
+            try {
+                String line = originalDataBuffer.take();
+                //File's meta-data find the index of cs-host
+                if (line.startsWith(FIELDS_STR)) {
+                    String[] metaData = line.split("\\s+");
+                    this.indexOfCS = findIndexOfHosts(metaData);
+                    if (indexOfCS < 0) throw new RuntimeException("No " + CS_HOST + " field. Cannot parse");
+                } else if (!line.startsWith("#")) {
+                    String host = extractHost(line);
+                    parsedDataBuffer.add(host);
                 }
-            }
-            String line = originalDataBuffer.poll();
-
-            //File's meta-data find the index of cs-host
-            if(line != null && line.startsWith(FIELDS_STR)){
-                String[] metaData = line.split(" ");
-                indexOfCS = findIndexOfHosts(Arrays.asList(metaData));
-            }
-            if(indexOfCS != -1)
-            {
-                extractHosts(line,indexOfCS);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
         }
     }
 
-    private int findIndexOfHosts(List<String> metdaData) {
-        return metdaData.indexOf(CS_HOST);
+    private String extractHost(String line) {
+        int countFieldIndex = 0;
+        String[] split = line.split("\\s+");
+        int i = 0;
+        int j = 0;
+        while (countFieldIndex <= indexOfCS && i < split.length) {
+            if (split[i].startsWith("\"")) {
+                j = i;
+                while (j < split.length && !split[j].endsWith("\"")) {
+                    j++;
+                }
+            } else {
+                j = i;
+            }
+            countFieldIndex++;
+            i++;
+        }
+
+        StringBuilder sb = new StringBuilder();
+        for (int idx = i -1 ; idx <= j && idx < split.length; idx++) {
+            sb.append(split[idx]);
+        }
+        return sb.toString();
     }
 
-    private void extractHosts(String line, int indexOfCS) {
+    private int findIndexOfHosts(String[] metaData) {
+        int csIndex = -1;
 
-        //Looking for hosts with spaces inside ToDo for later ((?<![\\])['"])((?:.(?!(?<![\\])\1))*.?)\1
-        Pattern pattern = Pattern.compile("((?<![\\\\])['\"])((?:.(?!(?<![\\\\])\\1))*.?)\\1");
-
-        Matcher matcher = pattern.matcher(line);
-
-        if(matcher.find()) {
-
-            validateAndSend(matcher.group());
-        }
-        //No hosts with inspaces were found, split by spaces and Index
-        else{
-            String[] splittedLine = line.split(" ");
-            String host = splittedLine[indexOfCS];
-            validateAndSend(host);
-
-        }
-    }
-
-    private void validateAndSend(String host) {
-        host = host.trim();
-
-        String urlPattern = "[-a-zA-Z0-9+&@#/%?=~_|!:,.;]*[-a-zA-Z0-9+&@#/%=~_|][\\s+(?=\\S{2})]*";
-        String ipPattern = "^(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})[\\s+(?=\\S{2})]*$";
-
-        if(host.length()<4 || host.equals("")){
-
-            return;
-        }
-
-        Pattern urlPat = Pattern.compile(urlPattern);
-        Pattern ipPat = Pattern.compile(ipPattern);
-
-        Matcher urlMatcher = urlPat.matcher(host);
-        Matcher ipMatcher = ipPat.matcher(host);
-
-        if(urlMatcher.matches() || ipMatcher.matches())
+        for(int i=0;i<metaData.length;++i)
         {
-            parsedDataBuffer.add(host);
+            if(metaData[i].equals(CS_HOST))
+            {
+                csIndex = i;
+            }
+
         }
+        return csIndex;
 
     }
 
